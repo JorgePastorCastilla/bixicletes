@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/customeSASS.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Exemple Formulari</title>
+    <script>
+      $(document).ready(function () {
+        $("#submit").click(function (event) {
+          $("form").addClass('was-validated');
+        });
+        $("#b_pujar_img").on('click', function (event) {
+          $("#galeria").prepend('<div  style=" background-color:red;width:100px;height:100px"><div>');
+
+        });
+      });
+    </script>
+    <style>
+      .custom-select:after {
+        content: "\f107";
+        font-family: FontAwesome;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+      Select image to upload:
+      <input type="file" name="fileToUpload" id="fileToUpload">
+      <input type="submit" value="Upload Image" name="submit">
+    </form>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Backoffice</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+          <ul class="nav nav-pills flex-column">
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+            <hr>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview</a>
+            </li>
+
+          </ul>
+        </nav>
+        <div class="container col-sm-9 col-md-10">
+          <div class="col-xs-12" style="height:100px;"></div>
+          <h1 class="text-center">INSERTAR NUEVOS MODELOS</h1>
+          <div class="col-xs-12" style="height:100px;"></div>
+          <form>
+            <hr>
+            <div class="form-group row">
+              <label for="model" class="col-sm-2 form-control-label">Model :
+              </label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control  " id="model" placeholder="Model" required="required">
+
+              </div>
+              <label for="marca" class="col-sm-2 form-control-label">Marca :</label>
+              <div class="col-sm-4 ">
+
+                <select class="form-control  marca d-block" required="required">
+                  <option value="">Seleccioni la marca</option>
+                  <option value="1">orbea</option>
+                  <option value="2">Steevens</option>
+                  <option value="3">B'Twin</option>
+                </select>
+              </div>
+
+            </div>
+
+            <hr>
+            <div class="form-group row">
+              <label for="cuadro" class="col-sm-2 form-control-label">Cuadro :</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control  " id="cuadro" placeholder="Cuadro" required="required">
+              </div>
+
+              <label for="tipus" class="col-sm-2 form-control-label">Tipus :</label>
+              <div class="col-sm-4">
+                <select class="  tipus form-control  d-block " required="required">
+                  <option value="">Seleccioni el Tipus</option>
+                  <option value="1">Mountain Bike</option>
+                  <option value="2">Treking</option>
+                  <option value="3">Plegable</option>
+                  <option value="4">Tandem</option>
+                  <option value="5">Electrica</option>
+                  <option value="6">BMX</option>
+                  <option value="7">Fat Bike</option>
+                  <option value="8">Triathlon</option>
+                  <option value="9">Chopper</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+              <div class="col-sm-2">
+                <label for="mides">
+                  Medidas:</label>
+              </div>
+              <div class="form-check required custom-controls-stacked col-sm-10">
+
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">XS (47-49cm) (14"-15")</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">S (49-53cm) (15"-17")</span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">M (53-57cm) (17"-19")
+                  </span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">L (57-61cm) (19"-21")
+                  </span>
+                </label>
+                <label class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input">
+                  <span class="custom-control-indicator"></span>
+                  <span class="custom-control-description">XL (+61cm) (+22")</span>
+                </label>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row" id="galeria">
+              <i class="fa fa-plus-square-o fa-5x" aria-hidden="true" id="b_pujar_img"></i>
+
+            </div>
+
+            <hr>
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <p>*pulse sobre el simbolo + para añadir nuevas imagenes si lo desea</p>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+              <div class="col-sm-6"></div>
+
+              <div class="col-sm-1"></div>
+              <div class="col-sm-3 ">
+                <button class="btn btn-primary btn-block  " id="submit">
+                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  Pujar Model</a>
+              </div>
+            </div>
+            <hr>
+
+          </form>
+
+        </div>
+      </body>
+    </html>
